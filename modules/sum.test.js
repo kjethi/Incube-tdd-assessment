@@ -23,3 +23,11 @@ test('Sum of "N numbers" of comma separated or "\\n" delimeter between two numbe
 test('supports custom delimiters', () => {
     expect(sum("//*\n12*3")).toBe(15);
 });
+
+test('Throws error when negative numbers found(Test for single negative number)', () => {
+    expect(() => sum("1,-2,3")).toThrow("negative numbers not allowed -2");
+});
+
+test('Throws error when negative numbers found(Test for all the negative numbers)', () => {
+    expect(() => sum("1,-6,3,6,-12")).toThrow("negative numbers not allowed -6, -12");
+});
