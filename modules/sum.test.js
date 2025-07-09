@@ -20,3 +20,6 @@ test('Sum of "N numbers" of comma separated or "\\n" delimeter between two numbe
     expect(sum("5\n7,4,5\n6")).toBe(27);
 });
 
+test('supports custom delimiters', () => {
+    expect(sum("//*\n12*3")).toBe(15);
+});
