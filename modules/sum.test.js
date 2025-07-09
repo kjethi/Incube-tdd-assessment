@@ -31,3 +31,8 @@ test('Throws error when negative numbers found(Test for single negative number)'
 test('Throws error when negative numbers found(Test for all the negative numbers)', () => {
     expect(() => sum("1,-6,3,6,-12")).toThrow("negative numbers not allowed -6, -12");
 });
+
+test('Ignore If number are bigger than 1000', () => {
+    expect(sum("2,1001")).toBe(2);
+});
+

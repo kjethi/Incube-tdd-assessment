@@ -8,7 +8,7 @@ const sum = (numbers) => {
         delimeterRegEx = new RegExp(`[${newDelimiter}\n]`);
         numbers = numbers.substring(nlIndex + 1);
     }
-    const numberArr = numbers.split(delimeterRegEx)
+    const numberArr = numbers.split(delimeterRegEx).filter(n => n <= 1000);
     const negativeNumber = numberArr.filter(n => 0 > n)
 
     if (negativeNumber.length > 0) {
