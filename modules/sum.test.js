@@ -16,3 +16,7 @@ test('Sum of N number of comma separated numbers', () => {
     expect(sum("5,7,4,5,6")).toBe(27);
 });
 
+test('Sum of "N numbers" of comma separated or "\\n" delimeter between two numbers in string","', () => {
+    expect(sum("5\n7,4,5\n6")).toBe(27);
+});
+
