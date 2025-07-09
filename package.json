@@ -1,0 +1,15 @@
+{
+  "name": "incube-tdd-assessment",
+  "version": "1.0.0",
+  "description": "This is for a assessment demo project which given by Incubyte company",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  }
+}
