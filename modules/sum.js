@@ -1,14 +1,15 @@
 const sum = (numbers) => {
-    if (numbers === "") return 0;
-    let delimeterRegEx = /[\n,]/
+    if (numbers === "") return 0; 
+    let delimeterRegEx = /[\n,]/ // split by , and \n if there is not custom delimiter
 
-    if (numbers.startsWith("//")) {
+    
+    if (numbers.startsWith("//")) {// check If there is custom delimiter defined
         const nlIndex = numbers.indexOf("\n");
         const newDelimiter = numbers.substring(2, nlIndex);
         numbers = numbers.substring(nlIndex + 1);
-        if (newDelimiter.startsWith("[")) {
-            const delimiterMatches = newDelimiter.match(/\[(.*?)\]/g);
-            const delimiters = delimiterMatches.map(d => d.slice(1, -1));
+        if (newDelimiter.startsWith("[")) { 
+            const delimiterMatches = newDelimiter.match(/\[(.*?)\]/g); // match strings which have square brackets [] around
+            const delimiters = delimiterMatches.map(d => d.slice(1, -1)); // remove brackets [,]
             const escapedDelimiters = delimiters.map(d => escapeRegExp(d));
             delimeterRegEx = new RegExp(escapedDelimiters.join("|"));
         }
