@@ -4,6 +4,7 @@
   "description": "This is for a assessment demo project which given by Incubyte company",
   "main": "server.js",
   "scripts": {
+    "start" : "node server.js",
     "test": "jest"
   },
   "keywords": [],
