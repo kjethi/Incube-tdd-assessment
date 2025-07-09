@@ -7,7 +7,7 @@ This is for a assessment demo project which given by Incubyte company
 To run tests, run the following command
 
 ```bash
-  npm install (ignore if you have done)
+  npm install (ignore if you have already done)
   npm run test
 ```
 
@@ -16,7 +16,7 @@ To run tests, run the following command
 To run tests, run the following command
 
 ```bash
-  npm install (ignore if you have done)
+  npm install (ignore if you have already done)
   npm start
 ```
 
