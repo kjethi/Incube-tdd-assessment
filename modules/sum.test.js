@@ -40,4 +40,12 @@ test('supports custom delimiters with any length ', () => {
     expect(sum("//[***]\n12***3")).toBe(15);
 });
 
+test('Allow Multiple delimiters with single character ', () => {
+    expect(sum("//[*][#]\n1*2#3")).toBe(6);
+});
+
+test('Allow Multiple delimiters with multiple character ', () => {
+    expect(sum("//[-*-][-#-]\n1-*-2-#-3")).toBe(6);
+});
+
 

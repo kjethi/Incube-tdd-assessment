@@ -7,10 +7,10 @@ const sum = (numbers) => {
         const newDelimiter = numbers.substring(2, nlIndex);
         numbers = numbers.substring(nlIndex + 1);
         if (newDelimiter.startsWith("[")) {
-            const endBracecIndex = newDelimiter.indexOf("]");
-            const dlMatches = newDelimiter.substring(1,endBracecIndex);
-            const escapedDelimiters = escapeRegExp(dlMatches);
-            delimeterRegEx = new RegExp(escapedDelimiters);
+            const delimiterMatches = newDelimiter.match(/\[(.*?)\]/g);
+            const delimiters = delimiterMatches.map(d => d.slice(1, -1));
+            const escapedDelimiters = delimiters.map(d => escapeRegExp(d));
+            delimeterRegEx = new RegExp(escapedDelimiters.join("|"));
         }
         else {
             delimeterRegEx = new RegExp(`[${newDelimiter}\n]`);
