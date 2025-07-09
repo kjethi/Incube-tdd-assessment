@@ -36,3 +36,8 @@ test('Ignore If number are bigger than 1000', () => {
     expect(sum("2,1001")).toBe(2);
 });
 
+test('supports custom delimiters with any length ', () => {
+    expect(sum("//[***]\n12***3")).toBe(15);
+});
+
+
